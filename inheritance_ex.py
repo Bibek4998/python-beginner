@@ -1,10 +1,31 @@
-# Example of the inheritance in Python Programming.
-class students:
-    def __init__(self,name,address): #This is the constructor of the class.
+# Inheritance example in python programming.
+class person:
+    def __init__(self, name,age): # This is the constructor of the class.
         self.name=name
-        self.address=address
-    def show(self): #This method is used to display the information of the students.
+        self.age=age
+    def display(self):  # This is the method of the class.
         print(f"Name: {self.name}")
-        print(f"Address:{self.address}")
-display=students("Bibek","Dhangadhi") #This is the object of the class students.
-display.show() #This will display the information of the students.
+        print(f"Age: {self.age}")
+    def message(self):  # This is the method of the class.
+         print("Welcome to the cursed world of Python programming.")    
+x=person("Bibek Joshi",16)  # This is the object of the class.
+x.display()     # This is the method calling.
+x.message()
+
+
+
+# Now we will create another class student which will inherit the properties of the class person.
+# The class student will have two additional properties semester and address.
+# The class student will have a method show() which will display the properties of the class student.
+
+
+class student(person):
+    def __init__(self, semester,address):
+        self.semester=semester
+        self.address=address
+    def show(self):
+            print(f"Semester: {self.semester}")
+            print(f"Address: {self.address}")
+
+y=student(5,"Kathmandu")
+y.show()
