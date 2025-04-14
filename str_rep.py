@@ -6,4 +6,4 @@ class stringExample:
     def __str__(self):
         return f"{self.name} is {self.age} years old."
 student=stringExample("Bibek", 16)
-print(student)
+print(student) 
