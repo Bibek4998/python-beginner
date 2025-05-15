@@ -27,7 +27,7 @@ cursor.executemany(
     ]
 )
 conn.commit()
-cursor.execute("SELECT * FROM students WHERE name LIKE 'S%a' COLLATE NOCASE")
+cursor.execute("SELECT * FROM students ")
 rows=cursor.fetchall()
 for row in rows:
     print("ID: ",row[0],"Name: ",row[1],"Semester: ",row[2],"Batch:",row[3])
